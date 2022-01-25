@@ -6,7 +6,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Welcome to nft-portfolio-tracker!</title>
+        <title>Treasure Portfolio Tracker</title>
       </Head>
       <main className="app">
         <Component {...pageProps} />
