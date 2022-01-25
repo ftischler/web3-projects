@@ -19,6 +19,8 @@
     "tslib": "2.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "16.1.0",
+    "@commitlint/config-conventional": "16.0.0",
     "@nrwl/cli": "13.5.0",
     "@nrwl/cypress": "13.5.0",
     "@nrwl/eslint-plugin-nx": "13.5.0",
@@ -57,7 +59,7 @@
     "typescript": "4.4.3"
   },
   "lint-staged": {
-    "*.{js,json,md,ts,tsx,html,css,scss,yml,yaml}": [
+    "*.{ts,tsx,js,jsx,json,css,scss,html,yml,yaml,md}": [
       "yarn format --uncommited"
     ]
   }
