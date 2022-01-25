@@ -1,0 +1,54 @@
+{
+  "root": "apps/nft-portfolio-tracker",
+  "sourceRoot": "apps/nft-portfolio-tracker",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/nft-portfolio-tracker",
+        "outputPath": "dist/apps/nft-portfolio-tracker"
+      },
+      "configurations": {
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/next:server",
+      "options": {
+        "buildTarget": "nft-portfolio-tracker:build",
+        "dev": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "nft-portfolio-tracker:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nrwl/next:export",
+      "options": {
+        "buildTarget": "nft-portfolio-tracker:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/nft-portfolio-tracker"],
+      "options": {
+        "jestConfig": "apps/nft-portfolio-tracker/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/nft-portfolio-tracker/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,28 @@
+{
+  "root": "apps/nft-portfolio-tracker-e2e",
+  "sourceRoot": "apps/nft-portfolio-tracker-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/nft-portfolio-tracker-e2e/cypress.json",
+        "devServerTarget": "nft-portfolio-tracker:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "nft-portfolio-tracker:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/nft-portfolio-tracker-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["nft-portfolio-tracker"]
+}

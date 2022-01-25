@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "nft-portfolio-tracker": "apps/nft-portfolio-tracker",
+    "nft-portfolio-tracker-e2e": "apps/nft-portfolio-tracker-e2e"
+  }
+}
