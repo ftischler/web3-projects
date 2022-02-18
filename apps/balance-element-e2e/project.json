@@ -1,0 +1,28 @@
+{
+  "root": "apps/balance-element-e2e",
+  "sourceRoot": "apps/balance-element-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/balance-element-e2e/cypress.json",
+        "devServerTarget": "balance-element:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "balance-element:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/balance-element-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["balance-element"]
+}

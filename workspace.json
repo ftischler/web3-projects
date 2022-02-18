@@ -1,6 +1,8 @@
 {
   "version": 2,
   "projects": {
+    "balance-element": "apps/balance-element",
+    "balance-element-e2e": "apps/balance-element-e2e",
     "nft-portfolio-tracker": "apps/nft-portfolio-tracker",
     "nft-portfolio-tracker-e2e": "apps/nft-portfolio-tracker-e2e"
   }
