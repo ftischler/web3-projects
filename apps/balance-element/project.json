@@ -15,7 +15,12 @@
         "baseHref": "/",
         "main": "apps/balance-element/src/main.ts",
         "tsConfig": "apps/balance-element/tsconfig.app.json",
-        "scripts": []
+        "scripts": [],
+        "assets": [
+          "apps/balance-element/src/favicon.ico",
+          "apps/balance-element/src/assets"
+        ],
+        "webpackConfig": "apps/balance-element/webpack.config.js"
       },
       "configurations": {
         "production": {

@@ -1,7 +1,15 @@
 {
   "extends": "../../tsconfig.base.json",
   "files": [],
-  "include": [],
+  "include": ["src/index.d.ts"],
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "incremental": true,
+    "emitDecoratorMetadata": false
+  },
   "references": [
     {
       "path": "./tsconfig.app.json"

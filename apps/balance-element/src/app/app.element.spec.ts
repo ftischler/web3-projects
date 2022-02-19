@@ -1,10 +1,10 @@
-import { AppElement } from './app.element';
+import { BalanceWidgetElement } from './app.element';
 
 describe('AppElement', () => {
-  let app: AppElement;
+  let app: BalanceWidgetElement;
 
   beforeEach(() => {
-    app = new AppElement();
+    app = new BalanceWidgetElement();
   });
 
   it('should create successfully', () => {
@@ -14,8 +14,8 @@ describe('AppElement', () => {
   it('should have a greeting', () => {
     app.connectedCallback();
 
-    expect(app.querySelector('h1').innerHTML).toContain(
-      'Welcome balance-element'
+    expect(app.querySelector('.balance').innerHTML).toContain(
+      'Your balance is:'
     );
   });
 });
